@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800&display=swap');
+body {
+	max-width: 800px;
+	margin: auto;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.section-one .volume {
+	display: flex;
+	justify-content: space-around;
+}
+
+.section-one .btn {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.section-one .btn input {
+	width: 60px;
+	height: 30px;
+	cursor: pointer;
+	appearance: none;
+	background-color: #f2f2ef;
+	border-radius: 15px;
+	position: relative;
+}
+
+.section-one .btn input::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	position: absolute;
+	border-radius: 15px;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+
+.section-one .btn input:checked::before {
+	left: calc(100% - 25px);
+	background-color: green;
+}
+
+.section-one > * {
+	color: #f2f2ef;
+}
+.piano-body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 40px;
+	background-color: #1c252c;
+	border-radius: 15px;
+	padding: 25px;
+}
+
+.section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: relative;
+}
+
+.keys {
+	grid-column: 1 / -1;
+	display: grid;
+	height: 200px;
+	grid-gap: 1px;
+	grid-template-columns: repeat(10, 1fr);
+}
+
+.key {
+	border-radius: 5px;
+	display: grid;
+	justify-content: center;
+	align-items: end;
+	padding-bottom: 20px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.keys-bottom .key {
+	background-color: #f2f2f0;
+}
+
+.keys-bottom {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	position: relative;
+}
+
+.keys-top .key {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-color: #212517;
+	color: white;
+}
+
+.keys-top {
+	height: 60%;
+	grid-template-columns: repeat(9, minmax(20px, 50px));
+	grid-gap: 30px;
+	position: absolute;
+	left: 50px;
+	right: 55px;
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	overflow: hidden;
+}
+
+.keys-top .key3 {
+	grid-column: 4 / 5;
+}
+
+.keys-top .key6 {
+	grid-column: 8 / 9;
+}
