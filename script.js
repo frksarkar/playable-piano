@@ -1,5 +1,6 @@
 const pianoKeys = document.querySelectorAll('.section-two .key');
 const volume = document.querySelector('.section-one .volume input');
+const showKeysBtn = document.querySelector('.section-one .btn input');
 const keyValue = [];
 const audio = new Audio('./tunes/a.wav');
 
@@ -12,7 +13,7 @@ function playTune(key) {
 
 	setTimeout(() => {
 		clickKey.classList.remove('active');
-	}, 200);
+	}, 150);
 }
 
 pianoKeys.forEach((element) => {
@@ -27,7 +28,16 @@ function handleVolume(e) {
 }
 
 volume.addEventListener('input', handleVolume);
+
 document.addEventListener('keypress', (e) => {
 	const keyValue = e.key.toUpperCase();
 	playTune(keyValue);
 });
+
+function showHideKeys(e) {
+	pianoKeys.forEach((element) => {
+		element.classList.toggle('hide');
+	});
+}
+
+showKeysBtn.addEventListener('click', showHideKeys);
