@@ -83,8 +83,8 @@ body {
 	cursor: pointer;
 }
 
-.section-two .key:active {
-	/* transform: scale(0.99); */
+.section-two .key.hide span {
+	display: none;
 }
 
 .section-two .key.white {
