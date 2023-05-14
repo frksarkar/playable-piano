@@ -8,7 +8,7 @@ function playTune(key) {
 	const clickKey = document.querySelector(`[data-key='${key}']`);
 	clickKey.classList.add('active');
 
-	audio.src = `./tunes/${key}.wav`;
+	audio.src = `https://github.com/FarukSarkar/playable-piano/tree/master/tunes/${key}.wav`;
 	if (keyValue.includes(key)) audio.play();
 
 	setTimeout(() => {
