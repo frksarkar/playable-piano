@@ -97,7 +97,7 @@ body {
 .keys-top .key {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
-	background-color: #212517;
+	background: linear-gradient(white, #212517 1%);
 	color: white;
 }
 
